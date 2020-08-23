@@ -13,3 +13,54 @@ for jwt authentication.
 ***
 All you need to do is connect it via maven or gradle 
 and implement the UserDetails interface.
+
+### Quick start
+** Added repository
+```groovy
+repositories {
+      mavenCentral()
+      maven {
+          url 'https://raw.github.com/larry-troy/jwt-auth-spring-boot-starter/mvn-repo'
+      }
+  }
+```
+
+** Added dependency
+```groovy
+implementation "com.github.larrytroy:jwt-auth-spring-boot-starter:0.1"
+```
+
+** Added settings for application.yml
+```yaml
+jwt-auth:
+  auth:
+    url: /api/auth
+    permitUrls: /api/internal/**
+    password-encoder: false
+  jwt:
+    expirationTime: 600000
+    tokenPrefix: Bearer
+    secretKey: 123123123123123123123
+```
+
+
+** Implement UserDetailsService (The class name must be UserDetailsServiceImpl)
+```java
+@Service
+public class UserDetailsServiceImpl implements UserDetailsService {
+
+    private final UserService userService;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userService.findByEmail(username);
+
+        if (user == null) {
+            throw new UsernameNotFoundException(username);
+        }
+
+        return new org.springframework.security.core.userdetails.User(user.getEmail(),
+                user.getPassword(), Collections.emptyList());
+    }
+}
+```
