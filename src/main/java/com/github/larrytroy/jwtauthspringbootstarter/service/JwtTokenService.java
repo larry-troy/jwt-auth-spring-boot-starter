@@ -1,6 +1,6 @@
-package github.com.larrytroy.jwtauthspringbootstarter.service;
+package com.github.larrytroy.jwtauthspringbootstarter.service;
 
-import github.com.larrytroy.jwtauthspringbootstarter.dto.JwtPayloadDto;
+import com.github.larrytroy.jwtauthspringbootstarter.dto.JwtPayloadDto;
 
 public interface JwtTokenService {
 

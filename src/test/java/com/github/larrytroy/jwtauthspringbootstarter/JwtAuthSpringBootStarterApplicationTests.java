@@ -1,4 +1,4 @@
-package github.com.larrytroy.jwtauthspringbootstarter;
+package com.github.larrytroy.jwtauthspringbootstarter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

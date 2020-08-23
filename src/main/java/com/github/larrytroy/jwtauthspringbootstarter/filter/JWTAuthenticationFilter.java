@@ -1,9 +1,9 @@
-package github.com.larrytroy.jwtauthspringbootstarter.filter;
+package com.github.larrytroy.jwtauthspringbootstarter.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import github.com.larrytroy.jwtauthspringbootstarter.dto.AuthDto;
-import github.com.larrytroy.jwtauthspringbootstarter.dto.JwtPayloadDto;
-import github.com.larrytroy.jwtauthspringbootstarter.service.JwtTokenService;
+import com.github.larrytroy.jwtauthspringbootstarter.dto.AuthDto;
+import com.github.larrytroy.jwtauthspringbootstarter.dto.JwtPayloadDto;
+import com.github.larrytroy.jwtauthspringbootstarter.service.JwtTokenService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -45,7 +45,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
             return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
-                            creds.getEmail(),
+                            creds.getUsername(),
                             creds.getPassword(),
                             Collections.emptyList())
             );

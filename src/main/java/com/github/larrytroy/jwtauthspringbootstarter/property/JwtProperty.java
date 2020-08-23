@@ -1,4 +1,4 @@
-package github.com.larrytroy.jwtauthspringbootstarter.property;
+package com.github.larrytroy.jwtauthspringbootstarter.property;
 
 import lombok.Getter;
 import lombok.Setter;

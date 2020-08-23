@@ -1,9 +1,9 @@
-package github.com.larrytroy.jwtauthspringbootstarter.config;
+package com.github.larrytroy.jwtauthspringbootstarter.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import github.com.larrytroy.jwtauthspringbootstarter.property.JwtProperty;
-import github.com.larrytroy.jwtauthspringbootstarter.service.JwtAccessTokenService;
-import github.com.larrytroy.jwtauthspringbootstarter.service.JwtTokenService;
+import com.github.larrytroy.jwtauthspringbootstarter.service.JwtAccessTokenService;
+import com.github.larrytroy.jwtauthspringbootstarter.property.JwtProperty;
+import com.github.larrytroy.jwtauthspringbootstarter.service.JwtTokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

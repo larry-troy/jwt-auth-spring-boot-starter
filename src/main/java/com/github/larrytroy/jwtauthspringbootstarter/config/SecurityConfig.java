@@ -1,10 +1,10 @@
-package github.com.larrytroy.jwtauthspringbootstarter.config;
+package com.github.larrytroy.jwtauthspringbootstarter.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import github.com.larrytroy.jwtauthspringbootstarter.filter.JWTAuthenticationFilter;
-import github.com.larrytroy.jwtauthspringbootstarter.filter.JWTAuthorizationFilter;
-import github.com.larrytroy.jwtauthspringbootstarter.property.AuthProperty;
-import github.com.larrytroy.jwtauthspringbootstarter.service.JwtTokenService;
+import com.github.larrytroy.jwtauthspringbootstarter.property.AuthProperty;
+import com.github.larrytroy.jwtauthspringbootstarter.service.JwtTokenService;
+import com.github.larrytroy.jwtauthspringbootstarter.filter.JWTAuthenticationFilter;
+import com.github.larrytroy.jwtauthspringbootstarter.filter.JWTAuthorizationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

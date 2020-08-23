@@ -1,4 +1,4 @@
-package github.com.larrytroy.jwtauthspringbootstarter.dto;
+package com.github.larrytroy.jwtauthspringbootstarter.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

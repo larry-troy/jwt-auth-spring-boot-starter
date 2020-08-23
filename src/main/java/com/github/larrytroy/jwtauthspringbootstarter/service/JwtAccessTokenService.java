@@ -1,12 +1,12 @@
-package github.com.larrytroy.jwtauthspringbootstarter.service;
+package com.github.larrytroy.jwtauthspringbootstarter.service;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import github.com.larrytroy.jwtauthspringbootstarter.dto.JwtPayloadDto;
-import github.com.larrytroy.jwtauthspringbootstarter.property.JwtProperty;
+import com.github.larrytroy.jwtauthspringbootstarter.dto.JwtPayloadDto;
+import com.github.larrytroy.jwtauthspringbootstarter.property.JwtProperty;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 

@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=github.com.larrytroy.jwtauthspringbootstarter.config.ApplicationConfig
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.github.larrytroy.jwtauthspringbootstarter.config.ApplicationConfig

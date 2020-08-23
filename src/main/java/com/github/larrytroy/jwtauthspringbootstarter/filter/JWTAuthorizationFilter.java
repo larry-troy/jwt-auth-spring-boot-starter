@@ -1,7 +1,7 @@
-package github.com.larrytroy.jwtauthspringbootstarter.filter;
+package com.github.larrytroy.jwtauthspringbootstarter.filter;
 
-import github.com.larrytroy.jwtauthspringbootstarter.dto.JwtPayloadDto;
-import github.com.larrytroy.jwtauthspringbootstarter.service.JwtTokenService;
+import com.github.larrytroy.jwtauthspringbootstarter.dto.JwtPayloadDto;
+import com.github.larrytroy.jwtauthspringbootstarter.service.JwtTokenService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
