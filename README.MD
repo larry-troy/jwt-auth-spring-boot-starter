@@ -30,14 +30,14 @@ implementation "com.github.larrytroy:jwt-auth-spring-boot-starter:0.1"
 ```yaml
 jwt-auth:
   auth:
-    url: /api/auth
-    permitUrls: /api/internal/**
+    url: /api/auth #url for authentication
+    permit-urls: /api/public/news/**, /api/public-files/** #endpoints that will not require a token
     password-encoder: false
   jwt:
     access:
-      expirationTime: 600000
+      expirationTime: 600000 #Token lifetime
       tokenPrefix: Bearer
-      secretKey: 123123123123123123123
+      secretKey: zupMjoPbUv #Generation secret key
 ```
 
 
@@ -67,14 +67,14 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 curl -i --header "Content-Type: application/json" \
   --request POST \
   --data '{"username":"xyz","password":"xyz"}' \
-  http://localhost:9595/api/auth  | less
+  http://localhost:8080/api/auth  | less
   
-Response:
+Http response headers:
 
 HTTP/1.1 200 
 Vary: Origin
 Vary: Access-Control-Request-Method
 Vary: Access-Control-Request-Headers
-Authorization: BearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJ1c2VybmFtZVwiOlwieHl6XCIsXCJyb2xlc1wiOltdfSIsImV4cCI6MTU5ODE4MjQ3Mn0.PU0MTcJ5N2-K4yhGRHunhfnd4cNsOQwIsKoeMXfeO2qwslL4Y0hUSMlmEsJYrQiOf-HNIuA004WdS8J49eBUNA
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJ1c2VybmFtZVwiOlwiYWRtaW5AYWRtaW4uYWRtaW5cIixcInJvbGVzXCI6W119IiwiZXhwIjoxNTk4MTg0MzUxfQ.zBji4U9TsEmGZopRYDykO4EZJYFp--rMWd03SPZrTMsuD_bDyx6_PBOejLURtRL1RmuHHPheNyABsu1spxXQlA
 X-Content-Type-Options: nosniff  
 ```

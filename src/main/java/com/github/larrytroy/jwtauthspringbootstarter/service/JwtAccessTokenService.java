@@ -38,7 +38,7 @@ public class JwtAccessTokenService implements JwtTokenService {
     public JwtPayloadDto getTokenSubject(@NonNull String token) {
         String subject = JWT.require(Algorithm.HMAC512(jwtProperty.getSecretKey().getBytes()))
                 .build()
-                .verify(token.replace(jwtProperty.getTokenPrefix(), ""))
+                .verify(token.replace(jwtProperty.getTokenPrefix() + " ", ""))
                 .getSubject();
         try {
             return objectMapper.readValue(subject, JwtPayloadDto.class);
