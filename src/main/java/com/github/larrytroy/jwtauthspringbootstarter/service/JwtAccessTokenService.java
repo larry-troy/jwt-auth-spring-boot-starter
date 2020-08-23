@@ -28,7 +28,7 @@ public class JwtAccessTokenService implements JwtTokenService {
                     .withSubject(subject)
                     .withExpiresAt(new Date(System.currentTimeMillis() + jwtProperty.getExpirationTime()))
                     .sign(Algorithm.HMAC512(jwtProperty.getSecretKey().getBytes()));
-            return String.format("%s%s", jwtProperty.getTokenPrefix(), jwtToken);
+            return String.format("%s %s", jwtProperty.getTokenPrefix(), jwtToken);
         } catch (IOException e) {
             throw new JWTCreationException(e.getMessage(), e);
         }

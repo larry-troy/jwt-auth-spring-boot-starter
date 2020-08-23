@@ -61,3 +61,20 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 }
 ```
+
+** 5. Result
+```bash
+curl -i --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"username":"xyz","password":"xyz"}' \
+  http://localhost:9595/api/auth  | less
+  
+Response:
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Authorization: BearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJ1c2VybmFtZVwiOlwieHl6XCIsXCJyb2xlc1wiOltdfSIsImV4cCI6MTU5ODE4MjQ3Mn0.PU0MTcJ5N2-K4yhGRHunhfnd4cNsOQwIsKoeMXfeO2qwslL4Y0hUSMlmEsJYrQiOf-HNIuA004WdS8J49eBUNA
+X-Content-Type-Options: nosniff  
+```
