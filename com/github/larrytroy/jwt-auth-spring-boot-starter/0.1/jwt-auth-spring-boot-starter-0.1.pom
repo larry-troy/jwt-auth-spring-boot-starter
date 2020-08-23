@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.github.larrytroy</groupId>
     <artifactId>jwt-auth-spring-boot-starter</artifactId>
-    <version>0.2</version>
+    <version>0.1</version>
     <name>jwt-auth-spring-boot-starter</name>
     <description>Spring boot starter for basic jwt authentication</description>
 
