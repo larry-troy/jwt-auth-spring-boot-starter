@@ -15,7 +15,7 @@ All you need to do is connect it via maven or gradle
 and implement the UserDetails interface.
 
 ### Quick start
-** Added repository
+** 1. Added repository
 ```groovy
 repositories {
       mavenCentral()
@@ -25,12 +25,12 @@ repositories {
   }
 ```
 
-** Added dependency
+** 2. Added dependency
 ```groovy
 implementation "com.github.larrytroy:jwt-auth-spring-boot-starter:0.1"
 ```
 
-** Added settings for application.yml
+** 3. Added settings for application.yml
 ```yaml
 jwt-auth:
   auth:
@@ -38,13 +38,14 @@ jwt-auth:
     permitUrls: /api/internal/**
     password-encoder: false
   jwt:
-    expirationTime: 600000
-    tokenPrefix: Bearer
-    secretKey: 123123123123123123123
+    access:
+      expirationTime: 600000
+      tokenPrefix: Bearer
+      secretKey: 123123123123123123123
 ```
 
 
-** Implement UserDetailsService (The class name must be UserDetailsServiceImpl)
+** 4. Implement UserDetailsService (The class name must be UserDetailsServiceImpl)
 ```java
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
