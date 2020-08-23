@@ -8,7 +8,7 @@
         <version>2.3.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>github.com.larrytroy</groupId>
+    <groupId>com.github.larrytroy</groupId>
     <artifactId>jwt-auth-spring-boot-starter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>jwt-auth-spring-boot-starter</name>
