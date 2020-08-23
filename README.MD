@@ -3,19 +3,15 @@
 jwt-auth-spring-boot-starter.
 =====================
 
-is a starter that will create an endpoint and will take over
+Is a starter that will create an endpoint and will take over
  the generation of the jwt token, the generation 
  of the refresh token.
-***
-My author's spring-boot-starter 
-which will create an endpoint 
-for jwt authentication.
 ***
 All you need to do is connect it via maven or gradle 
 and implement the UserDetails interface.
 
 ### Quick start
-** 1. Added repository
+** 1. To Add repository
 ```groovy
 repositories {
       mavenCentral()
@@ -25,12 +21,12 @@ repositories {
   }
 ```
 
-** 2. Added dependency
+** 2. To Add dependency
 ```groovy
 implementation "com.github.larrytroy:jwt-auth-spring-boot-starter:0.1"
 ```
 
-** 3. Added settings for application.yml
+** 3. To Add settings for application.yml
 ```yaml
 jwt-auth:
   auth:
@@ -45,7 +41,7 @@ jwt-auth:
 ```
 
 
-** 4. Implement UserDetailsService (The class name must be UserDetailsServiceImpl)
+** 4. Implement UserDetailsService (The class's name must be 'UserDetailsServiceImpl')
 ```java
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
