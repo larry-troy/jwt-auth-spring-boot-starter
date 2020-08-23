@@ -10,12 +10,12 @@
     </parent>
     <groupId>com.github.larrytroy</groupId>
     <artifactId>jwt-auth-spring-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <name>jwt-auth-spring-boot-starter</name>
     <description>Spring boot starter for basic jwt authentication</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
         <github.global.server>github</github.global.server>
     </properties>
 
