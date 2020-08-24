@@ -38,6 +38,9 @@ jwt-auth:
       expirationTime: 600000 #Token lifetime
       tokenPrefix: Bearer
       secretKey: zupMjoPbUv #Generation secret key
+  cors:
+    enabled: true #default false
+    allowed-origins: *
 ```
 
 

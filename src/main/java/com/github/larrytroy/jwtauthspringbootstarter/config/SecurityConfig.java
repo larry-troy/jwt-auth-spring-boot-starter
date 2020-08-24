@@ -19,9 +19,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.cors.CorsConfigurationSource;
 
 @ConditionalOnBean(name = "userDetailsServiceImpl")
-@ConditionalOnProperty("jwt-auth.auth.url")
+@ConditionalOnProperty({"jwt-auth.auth.url",
+        "jwt-auth.jwt.access.expirationTime",
+        "jwt-auth.jwt.access.tokenPrefix",
+        "jwt-auth.jwt.access.secretKey"})
 @RequiredArgsConstructor
-@EnableConfigurationProperties(AuthProperty.class)
+@EnableConfigurationProperties({AuthProperty.class})
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 

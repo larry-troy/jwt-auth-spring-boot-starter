@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 @Getter
 @Setter
@@ -11,9 +12,9 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties("jwt-auth.jwt.access")
 public class JwtProperty {
 
-    private Long expirationTime;
+    private Long expirationTime = 0L;
 
-    private String tokenPrefix;
+    private String tokenPrefix = "";
 
-    private String secretKey;
+    private String secretKey = "";
 }

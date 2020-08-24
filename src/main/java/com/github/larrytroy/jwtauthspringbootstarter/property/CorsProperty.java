@@ -11,12 +11,10 @@ import java.util.List;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties("jwt-auth.auth")
-public class AuthProperty {
+@ConfigurationProperties("jwt-auth.cors")
+public class CorsProperty {
 
-    private String url = "";
+    private Boolean enabled = false;
 
-    private List<String> permitUrls = new ArrayList<>();
-
-    private Boolean passwordEncoder = true;
+    private List<String> allowedOrigins = new ArrayList<>();
 }
