@@ -1,1 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.github.larrytroy.jwtauthspringbootstarter.config.ApplicationConfig
+org.springframework.context.ApplicationContextInitializer=com.github.larrytroy.jwtauthspringbootstarter.aci.RejectPropertiesAppInitializer
