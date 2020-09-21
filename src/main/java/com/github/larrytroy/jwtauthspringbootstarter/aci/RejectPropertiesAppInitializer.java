@@ -26,8 +26,8 @@ public class RejectPropertiesAppInitializer implements ApplicationContextInitial
 
         for (String requiredProperty : requiredProperties) {
             if (propertySource.getProperty(requiredProperty) == null) {
-                String errorMessage = String.format("Property '%s' is missing from application.ym",
-                        propertySource);
+                String errorMessage = String.format("Property '%s' is missing from application.yml",
+                        requiredProperty);
 
                 throw new RuntimeException(errorMessage);
             }
